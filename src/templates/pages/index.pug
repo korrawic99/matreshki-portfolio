@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+	- var title = 'Главная'
+
+block content
+	.banner
+		.containerWide
+			.banner-block
+				.banner-block-left
+					.banner-block-left__title Уникальная художественная мастерская <span>Малина</span>
+					a.banner-block-left__btn(href="#") Узнать больше
+					.banner-block-left__text Роспись <span>матрёшек</span>, создание <span>заготовок</span>, роспись <span>посуды</span> и многое другое
+				.banner-block-right
+					img.banner-block-right__img(src="assets/images/banner.png", alt="")
+			.banner-bot
+				img.banner-bot__doll(src="assets/images/banner-doll.svg", alt="")
+				img.banner-bot__line(src="assets/images/banner-line.svg", alt="")

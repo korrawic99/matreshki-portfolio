@@ -1,0 +1,46 @@
+*:focus{
+	outline: none;
+}
+*{
+	box-sizing: border-box;
+}
+html,
+body{
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: #000;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+.containerWide{
+	max-width: 1210px;
+	width: 95%;
+	margin: 0 auto;
+  position: relative;
+}
+.container{
+	max-width: 970px;
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+  position: relative;
+}
+.wrapper{
+	overflow: hidden;
+}
+
+@import 'common/keyframes';
+@import 'common/adaptive';
+@import 'common/normalize'; 
+@import 'common/fonts'; 
+@import 'common/header'; 
+@import 'common/footer';
+@import 'pages/index'; 

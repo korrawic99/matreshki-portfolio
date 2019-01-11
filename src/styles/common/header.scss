@@ -1,0 +1,26 @@
+.header{
+	position: absolute;
+	font-family: 'Museo Sans Cyrl';
+	width: 100%;
+	padding-top: 40px;
+	&-wrap{
+		max-width: 1365px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-menu{
+		font-size: 14px;
+		display: flex;
+    justify-content: space-between;
+    flex: 0 590px;
+	}
+	&-phone, &-location, &-cart{
+		display: flex;
+		align-items: center;
+		&__img{
+			margin-right: 10px;
+		}
+	}
+}
