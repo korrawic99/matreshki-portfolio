@@ -35,6 +35,12 @@ ul{
 }
 .wrapper{
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.main-content{
+	flex: 1;
 }
 
 @import 'common/keyframes';
@@ -43,4 +49,5 @@ ul{
 @import 'common/fonts'; 
 @import 'common/header'; 
 @import 'common/footer';
+@import 'pages/main'; 
 @import 'pages/index'; 
