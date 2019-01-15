@@ -1,0 +1,108 @@
+.portfolio{
+	padding-top: 180px;
+	font-family: 'Museo Sans Cyrl';
+	&-wrap{
+		max-width: 1400px;
+		width: 97%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	&__title{
+		font-size: 36px;
+		font-weight: bold;
+		text-align: center;
+	}
+	&-tabs{
+		&-navigation{
+			font-size: 18px;
+			font-family: 'Museo Sans Cyrl Lightest';
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-top: 30px;
+			margin-bottom: 40px;
+			padding: 0 10px;
+			&__item.selected{
+				font-family: 'Museo Sans Cyrl';
+				font-weight: bold;
+			}
+		}
+		&-tab{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&-items{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			&-item{
+				width: 325px;
+				margin: 0 10px 40px;
+				&__img{
+					width: 100%;
+				}
+				&__text{
+					font-size: 14px;
+					font-family: 'Museo Sans Cyrl Lightest';
+					text-align: center;
+					margin-top: 15px;
+					margin-bottom: 15px;
+				}
+				&-row{
+					display: flex;
+					justify-content: space-between;
+					&__btn{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 220px;
+						height: 48px;
+						font-size: 18px;
+						border: 2px solid #DC143C;
+						border-radius: 30px;
+						&:hover{
+							transform: translateY(-3px);
+							box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+						}
+						&:active{
+							transform: translateY(3px);
+							box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+						}
+					}
+					&__price{
+						font-family: 'Museo Sans Cyrl Lightest';
+						font-size: 14px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin-right: 30px;
+						& span{
+							font-family: 'Museo Sans Cyrl';
+							font-size: 24px;
+						}
+					}
+				}
+			}
+			&-show{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: 25px;
+				cursor: pointer;
+				margin-bottom: 20px;
+				&__arr{
+					margin-top: 5px;
+					width: 100%;
+				}
+				&.active{
+					width: 95px;
+					& img{
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+}

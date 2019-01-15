@@ -1,0 +1,52 @@
+extends ../template
+
+block variables
+	- var title = 'Портфолио'
+
+block content
+	.portfolio
+		.portfolio-wrap
+			.portfolio__title Наши работы
+			.portfolio-tabs
+				ul.portfolio-tabs-navigation
+					li
+						a.portfolio-tabs-navigation__item(href="#portfolioTab1") Классическая матрешка
+					li
+						a.portfolio-tabs-navigation__item(href="#portfolioTab2") Матрешка авангард
+					li
+						a.portfolio-tabs-navigation__item(href="#portfolioTab3") Корпоративные матрешки
+					li
+						a.portfolio-tabs-navigation__item(href="#portfolioTab4") Костюмные матрешки
+					li
+						a.portfolio-tabs-navigation__item(href="#portfolioTab5") Круговые матрешки
+					li
+						a.portfolio-tabs-navigation__item(href="#portfolioTab6") Религия
+				.portfolio-tabs-tab#portfolioTab1
+					.portfolio-tabs-tab-items
+						.portfolio-tabs-tab-item
+							img.portfolio-tabs-tab-item__img(src="assets/images/portfolio-item.jpg", alt="")
+							.portfolio-tabs-tab-item__text Подпись под фото
+							.portfolio-tabs-tab-item-row
+								a.portfolio-tabs-tab-item-row__btn(href="#") Хочу такую
+								.portfolio-tabs-tab-item-row__price <span>3550</span> рублей
+						.portfolio-tabs-tab-item
+							img.portfolio-tabs-tab-item__img(src="assets/images/portfolio-item.jpg", alt="")
+							.portfolio-tabs-tab-item__text Подпись под фото
+							.portfolio-tabs-tab-item-row
+								a.portfolio-tabs-tab-item-row__btn(href="#") Хочу такую
+								.portfolio-tabs-tab-item-row__price <span>3550</span> рублей
+						.portfolio-tabs-tab-item
+							img.portfolio-tabs-tab-item__img(src="assets/images/portfolio-item.jpg", alt="")
+							.portfolio-tabs-tab-item__text Подпись под фото
+							.portfolio-tabs-tab-item-row
+								a.portfolio-tabs-tab-item-row__btn(href="#") Хочу такую
+								.portfolio-tabs-tab-item-row__price <span>3550</span> рублей
+						.portfolio-tabs-tab-item
+							img.portfolio-tabs-tab-item__img(src="assets/images/portfolio-item.jpg", alt="")
+							.portfolio-tabs-tab-item__text Подпись под фото
+							.portfolio-tabs-tab-item-row
+								a.portfolio-tabs-tab-item-row__btn(href="#") Хочу такую
+								.portfolio-tabs-tab-item-row__price <span>3550</span> рублей
+					.portfolio-tabs-tab-show Показать все
+						img.portfolio-tabs-tab-show__arr(src="assets/images/work-arrow.svg", alt="Arrow")
+

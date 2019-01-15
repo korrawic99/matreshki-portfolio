@@ -43,6 +43,7 @@
 			&__text{
 				font-size: 14px;
 				margin-top: 25px;
+				font-family: 'Museo Sans Cyrl Lightest';
 				& span{
 					display: inline-block;
 					border-bottom: 1px solid #000;
@@ -81,6 +82,7 @@
     align-items: center;
 		&__title{
 			font-size: 48px;
+			font-weight: bold;
 			max-width: 670px;
 			text-align: center;
 			margin-top: 90px;
@@ -106,6 +108,7 @@
 					left: 50%;
 					transform: translateX(-50%);
 					white-space: nowrap;
+					font-family: 'Museo Sans Cyrl Lightest';
 				}
 				&:first-child{
 					background: url('../images/doll-1.svg') no-repeat;
@@ -186,13 +189,18 @@
 	background-repeat: no-repeat;
 	background-position: center 140px;
   background-size: contain;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	margin-top: 45px;
 	margin-bottom: 50px;
+	&-wrap{
+		max-width: 1400px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	&__title{
 		font-size: 48px;
+		font-weight: bold;
 		max-width: 516px;
 		text-align: center;
 		margin-bottom: 40px;
@@ -202,7 +210,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		&-item{
-			width: 335px;
+			width: 330px;
 			margin: 0 9px 20px;
 			&__img{
 				box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.2);
@@ -215,7 +223,8 @@
 			}
 			&__text{
 				line-height: 32px;
-				font-size: 18px;    
+				font-size: 18px;   
+				font-family: 'Museo Sans Cyrl Lightest'; 
 				height: 90px;
 				overflow: hidden;
 				margin-top: 18px;
@@ -239,12 +248,6 @@
 					box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
 				}
 			}
-		}
-	}
-	&-hide{
-		display: none;
-		&.active{
-			display: flex;
 		}
 	}
 	&-show{
@@ -284,6 +287,7 @@
 		&__text{
 			line-height: 32px;
 			font-size: 18px;
+			font-family: 'Museo Sans Cyrl Lightest';
 			text-align: center;
 			margin-top: 20px;
 		}
@@ -315,6 +319,7 @@
 				&__text{
 					line-height: 49px;
 					font-size: 24px;
+					font-family: 'Museo Sans Cyrl Lightest';
 				}
 			}
 		}
@@ -352,6 +357,7 @@
 	&__title{
 		font-size: 36px;
 		text-align: center;
+		font-weight: bold;
 	}
 	&-main{
 		margin-top: 70px;
@@ -367,6 +373,7 @@
 				list-style-type: disc;
 				&__item{
 					font-size: 18px;
+					font-family: 'Museo Sans Cyrl Lightest';
 					margin-bottom: 25px;
 				}
 			}
@@ -393,6 +400,7 @@
 		&-right{
 			&__text{
 				font-size: 18px;
+				font-family: 'Museo Sans Cyrl Lightest';
 				margin-bottom: 30px;
 				text-align: center;
 			}
@@ -406,7 +414,7 @@
 				}
 				&-item{
 					margin: 0 30px;
-					height: 400px;
+					height: 405px;
 					&__img{
 						box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.4);
 						width: 100%;
@@ -422,6 +430,9 @@
 				margin-top: -25px;
 				position: relative;
 				z-index: 2;
+				&__current{
+					font-family: 'Museo Sans Cyrl Lightest';
+				}
 				&-arrow{
 					cursor: pointer;
 					&__img{
@@ -440,6 +451,7 @@
 	padding-bottom: 50px;
 	&__title{
 		font-size: 36px;
+		font-weight: bold;
 		text-align: center;
 		margin-bottom: 50px;
 	}
@@ -452,6 +464,7 @@
 			flex-direction: column;
 			&__label{
 				font-size: 14px;
+				font-family: 'Museo Sans Cyrl Lightest';
 				margin-bottom: 10px;
 				padding-left: 20px;
 			}
@@ -461,6 +474,9 @@
 				border-radius: 30px;
 				width: 280px;
 				padding: 13px;
+				&::placeholder {
+					color: #7C7A7A;
+				}
 			}
 		}
 		&__btn{
