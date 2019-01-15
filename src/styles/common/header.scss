@@ -14,7 +14,18 @@
 		font-size: 14px;
 		display: flex;
     justify-content: space-between;
-    flex: 0 590px;
+		flex: 0 590px;
+		&__item{
+			position: relative;
+			&:hover:after{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: #DC143C;
+			}
+		}
 	}
 	&-phone, &-location, &-cart{
 		display: flex;

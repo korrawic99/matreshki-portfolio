@@ -1,4 +1,5 @@
 .banner{
+	height: calc(100vh - 15px);
 	background-color: #FFE5BE;
 	background-image: url(../images/banner-ornament.svg);
 	background-repeat: no-repeat;
@@ -7,6 +8,9 @@
 	margin: 15px 15px 0;
 	padding-top: 195px;
 	font-family: 'Museo Sans Cyrl';
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 	&-block{
 		display: flex;
 		align-items: center;
@@ -61,6 +65,422 @@
 		padding-bottom: 5px;
 		&__doll{
 			animation: move 2s infinite ease-in-out;
+		}
+	}
+}
+
+.about{
+	font-family: 'Museo Sans Cyrl';
+	background-image: url(../images/about-ornament.svg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% 70%;
+	&-block{
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		&__title{
+			font-size: 48px;
+			max-width: 670px;
+			text-align: center;
+			margin-top: 90px;
+		}
+		&-dolls{
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			margin-top: 55px;
+			margin-bottom: 90px;
+			&-item{
+				position: relative;
+				margin: 0px 30px;
+				&__num{
+					position: absolute;
+					top: 17px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				&__text{
+					position: absolute;
+					bottom: 40px;
+					left: 50%;
+					transform: translateX(-50%);
+					white-space: nowrap;
+				}
+				&:first-child{
+					background: url('../images/doll-1.svg') no-repeat;
+					background-size: contain;
+					height: 200px;
+					width: 140px;
+					& .about-block-dolls-item__num{
+						font-size: 48px;
+					}
+					& .about-block-dolls-item__text{
+						font-size: 18px;
+					}
+				}
+				&:nth-child(2){
+					background: url('../images/doll-2.svg') no-repeat;
+					background-size: contain;
+					height: 180px;
+					width: 125px;
+					& .about-block-dolls-item__num{
+						font-size: 46px;
+					}
+					& .about-block-dolls-item__text{
+						font-size: 16px;
+					}
+				}
+				&:nth-child(3){
+					background: url('../images/doll-3.svg') no-repeat;
+					background-size: contain;
+					height: 160px;
+					width: 110px;
+					& .about-block-dolls-item__num{
+						font-size: 42px;
+					}
+					& .about-block-dolls-item__text{
+						font-size: 12px;
+					}
+				}
+				&:last-child{
+					background: url('../images/doll-4.svg') no-repeat;
+					background-size: contain;
+					height: 140px;
+					width: 95px;
+					& .about-block-dolls-item__num{
+						font-size: 38px;
+					}
+					& .about-block-dolls-item__text{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		&__btn{
+			margin-bottom: 45px;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 210px;
+			height: 55px;
+			font-size: 18px;
+			border: 2px solid #DC143C;
+			border-radius: 30px;
+			&:hover{
+				transform: translateY(-3px);
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+			&:active{
+				transform: translateY(3px);
+				box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+
+.work{
+	font-family: 'Museo Sans Cyrl';
+	background-image: url(../images/work-ornament.svg);
+	background-repeat: no-repeat;
+	background-position: center 140px;
+  background-size: contain;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 45px;
+	margin-bottom: 50px;
+	&__title{
+		font-size: 48px;
+		max-width: 516px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&-main{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		&-item{
+			width: 335px;
+			margin: 0 9px 20px;
+			&__img{
+				box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.2);
+				width: 100%;
+			}
+			&__title{
+				font-size: 24px;
+				margin-top: 20px;
+				font-weight: bold;
+			}
+			&__text{
+				line-height: 32px;
+				font-size: 18px;    
+				height: 90px;
+				overflow: hidden;
+				margin-top: 18px;
+				margin-bottom: 30px;
+			}
+			&__btn{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 210px;
+				height: 55px;
+				font-size: 18px;
+				border: 2px solid #DC143C;
+				border-radius: 30px;
+				&:hover{
+					transform: translateY(-3px);
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				}
+				&:active{
+					transform: translateY(3px);
+					box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+				}
+			}
+		}
+	}
+	&-hide{
+		display: none;
+		&.active{
+			display: flex;
+		}
+	}
+	&-show{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 25px;
+		margin-top: 30px;
+		cursor: pointer;
+		&__arr{
+			margin-top: 5px;
+			width: 100%;
+		}
+		&.active{
+			width: 95px;
+			& img{
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.process{
+	font-family: 'Museo Sans Cyrl';
+	background-image: url(../images/process-ornament.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	&-block{
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		&__title{
+			font-size: 36px;
+			font-weight: bold;
+		}
+		&__text{
+			line-height: 32px;
+			font-size: 18px;
+			text-align: center;
+			margin-top: 20px;
+		}
+		&-tab{
+			&#secondTab{
+				margin-bottom: 156px;
+			}
+			display: flex;
+			margin-top: 40px;
+			&-left{
+				&__img{
+					margin-right: 40px;
+					height: 378px;
+					#secondTab & {
+						width: 395px;
+						height: auto;
+					}
+					#thirdTab & {
+						margin-left: -66px;
+					}
+				}
+			}
+			&-right{
+				&__title{
+					font-size: 24px;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+				&__text{
+					line-height: 49px;
+					font-size: 24px;
+				}
+			}
+		}
+		&-navigation{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-left: 260px;
+			margin-top: -87px;
+			width: 580px;
+			&-item{
+				display: flex;
+    		flex-direction: column;
+				align-items: center;
+				font-size: 18px;
+				&__text{
+					margin-top: 10px;
+				}
+			}
+			&__arr{
+				margin-top: -15px;
+			}
+		}
+	}
+}
+
+.order{
+	font-family: 'Museo Sans Cyrl';
+	background-image: url(../images/order-ornament.svg);
+	background-repeat: no-repeat;
+	background-position: center 170px;
+	background-size: contain;
+	margin-top: 90px;
+	margin-bottom: 35px;
+	&__title{
+		font-size: 36px;
+		text-align: center;
+	}
+	&-main{
+		margin-top: 70px;
+		display: flex;
+		justify-content: space-between;
+		&-left{
+			margin-top: 50px;
+			&__title{
+				font-size: 24px;
+				margin-bottom: 40px;
+			}
+			&-list{
+				list-style-type: disc;
+				&__item{
+					font-size: 18px;
+					margin-bottom: 25px;
+				}
+			}
+			&__btn{
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 210px;
+    		height: 55px;
+    		font-size: 18px;
+				border: 2px solid #DC143C;
+				border-radius: 30px;
+				&:hover{
+					transform: translateY(-3px);
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				}
+				&:active{
+					transform: translateY(3px);
+					box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+				}
+			}
+		}
+		&-right{
+			&__text{
+				font-size: 18px;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+			&-slider{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: relative;
+				&-inn{
+					width: 530px;
+				}
+				&-item{
+					margin: 0 30px;
+					height: 400px;
+					&__img{
+						box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.4);
+						width: 100%;
+					}
+				}
+			}
+			&-nav{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 30px;
+				font-size: 36px;
+				margin-top: -25px;
+				position: relative;
+				z-index: 2;
+				&-arrow{
+					cursor: pointer;
+					&__img{
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+}
+
+.form{
+	font-family: 'Museo Sans Cyrl';
+	background-color: #FFE9BE;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	&__title{
+		font-size: 36px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&-data{
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		&-pair{
+			display: flex;
+			flex-direction: column;
+			&__label{
+				font-size: 14px;
+				margin-bottom: 10px;
+				padding-left: 20px;
+			}
+			&__input{
+				background: #FFFFFF;
+				border: 2px solid #6C6767;
+				border-radius: 30px;
+				width: 280px;
+				padding: 13px;
+			}
+		}
+		&__btn{
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 210px;
+			height: 48px;
+			font-size: 18px;
+			border: 2px solid #DC143C;
+			border-radius: 30px;
+			&:hover{
+				transform: translateY(-3px);
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+			&:active{
+				transform: translateY(3px);
+				box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+			}
 		}
 	}
 }
