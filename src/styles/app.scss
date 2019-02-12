@@ -35,13 +35,6 @@ ul{
 }
 .wrapper{
 	overflow-x: hidden;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-.main-content{
-	flex: 1;
-	position: relative;
 }
 
 @import 'common/keyframes';

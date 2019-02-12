@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$(document).on('click', '.work-show, .portfolio-tabs-tab-show', function (e) {
+	$(document).on('click', '.portfolio-tabs-tab-show', function (e) {
 		e.preventDefault();
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
@@ -10,12 +10,22 @@ $(document).ready(function () {
 		return false;
 	});
 
+	var shopTabContainers = $('div.shop-tabs > div');
+	shopTabContainers.hide().filter(':first').show();
+	$('div.shop-tabs ul.shop-tabs-navigation a').click(function () {
+		shopTabContainers.hide();
+		shopTabContainers.filter(this.hash).show();
+		$('div.shop-tabs ul.shop-tabs-navigation a').removeClass('selected');
+		$(this).addClass('selected');
+		return false;
+	}).filter(':first').click();
+
 	var processTabContainers = $('div.process-block-tabs > div');
 	processTabContainers.hide().filter(':first').show();
-	$('div.process-block-tabs ul.process-block-navigation a').click(function () {
+	$('ul.process-block-navigation a').click(function () {
 		processTabContainers.hide();
 		processTabContainers.filter(this.hash).show();
-		$('div.process-block-tabs ul.process-block-navigation a').removeClass('selected');
+		$('ul.process-block-navigation a').removeClass('selected');
 		$(this).addClass('selected');
 		return false;
 	}).filter(':first').click();
