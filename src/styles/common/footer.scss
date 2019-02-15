@@ -55,3 +55,73 @@
 		}
 	}
 }
+
+@include w480{
+	.footer{
+		&-block{
+			&__logo{
+				order: -1;
+			}
+			&-menu{
+				margin-top: 0;
+				flex-direction: column;
+				align-items: center;
+				&__item{
+					margin-bottom: 15px;
+				}
+				&__item:nth-child(1){
+					order: 2;
+				}
+				&__item:nth-child(2),
+				&__item:nth-child(4){
+					order: 1;
+				}
+			}
+			&-contacts{
+				order: -1;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 25px;
+				&-pair{
+					margin-bottom: 25px;
+					&__label{
+						margin-bottom: 10px;
+					}
+				}
+				&-pair:last-child{
+					order: -1;
+				}
+				&-pair:nth-child(2){
+					position: absolute;
+					bottom: -100px;
+				}
+			}
+		}
+	}
+	.footerInfo{
+		padding: 20px 0;
+		margin-top: 90px;
+		&-block{
+			flex-direction: column;
+			align-items: center;
+			&__text{
+				margin-bottom: 15px;
+			}
+			&__text:first-child{
+				margin-bottom: 0;
+				order: 1;
+			}
+		}
+	}
+}
+@include w320{
+	.footer{
+		&-block{
+			&-menu{
+				&__item{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

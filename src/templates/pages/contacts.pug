@@ -1,0 +1,35 @@
+extends ../template
+
+block variables
+	- var title = 'Контакты'
+
+block content
+	.contacts-info
+		.contacts-info-wrap
+			.contacts-info-block
+				.contacts-info-left
+					.contacts-info-left__title Контактные данные
+					.contacts-info-left__text ООО “Малина”
+					.contacts-info-left__text ИНН: 78590902348
+					.contacts-info-left__text ОГРН: 11877974534521
+					.contacts-info-left__text г. Санкт-Петербург ул. Гороховая д. 5
+					a.contacts-info-left__text(href="mailto:info@malina.ru") info@malina.ru
+					a.contacts-info-left__num(href="tel:88129876543") 8 (812) 987-65-43
+					.contacts-info-left__time 10:00 - 21:00
+				.contacts-info-right
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A745c4b2609de4f9e82c787005f5ffe7b0b4daf3290dd84e8a3182347330b8a5c&amp;width=100%25&amp;height=440&amp;lang=ru_RU&amp;scroll=false")
+	.contacts-connect-form
+		.connect-form
+			form.connect-form-block(action="")
+				.connect-form__title Связаться с нами
+				.connect-form-row
+					.connect-form-row-pair
+						label.connect-form-row-pair__label(for="e-mail") E-mail:
+						input.connect-form-row-pair__input(type="text" name="e-mail" id="e-mail" placeholder="test@info.ru" onfocus="this.placeholder = ''" onblur="this.placeholder = 'test@info.ru'")
+					.connect-form-row-pair
+						label.connect-form-row-pair__label(for="tel") Телефон:
+						input.connect-form-row-pair__input(type="tel" name="tel" id="tel" placeholder="+7 (986) 543-21-00" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 (986) 543-21-00'")
+				.connect-form-pair
+					label.connect-form-pair__label(for="message") Сообщение:
+					textarea.connect-form-pair__area(name="message" id="message" cols="100" rows="10" placeholder="Введите сообщение" maxlength="300")
+				button.connect-form__btn(type="submit" data-default="Заказать звонок") Сделать заказ

@@ -1,0 +1,91 @@
+extends ../template
+
+block variables
+	- var title = 'Мастер Классы'
+
+block content
+	.master-class
+		.master-class-wrap
+			.master-class-tabs
+				ul.master-class-tabs-navigation
+					li
+						a.master-class-tabs-navigation__item(href="#masterTab1") О мастерклассе
+					li
+						a.master-class-tabs-navigation__item(href="#masterTab2") Фотоотчёты
+					li
+						a.master-class-tabs-navigation__item(href="#masterTab3") Запись на мастеркласс
+				.master-class-tabs-tab#masterTab1
+					.master-class-tabs-tab__title Мастерклассы от художественной мастерской “Малина”
+					.master-class-tabs-tab__text Тогда приглашаем Вас расписать русскую матрешку самому! У Вас получится, даже если не держали в руках кисть со времен своего детства. Потому что это занятие доступно для всех! Секрет в том, что – во-первых, роспись проходит поэтапно (шаг за шагом); во-вторых, для каждого этапа мы предлагаем использовать самые простые, но эффектные элементы росписи; в-третьих, мы обеспечим Вас качественными материалами и опытной поддержкой. Вам останется только приложить немного терпения и желания! А мы приложим свои знания и мастерство, чтобы Ваша Немного о том, как проходит это мероприятие...
+					.master-class-tabs-tab-main
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 1
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item1.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Вам предоставляется все необходимое для росписи
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 2
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item2.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Вы выбираете набор заготовок из 3-х матрешек
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 3
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item3.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Выбираете цвета и окрашиваете фоны для платка и сарафана
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 4
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item4.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Создаёте прическу и украшения (бусы, серьги, кокошник)
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 5
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item5.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Выбираете готовые узоры или создаёте свои и расписываете платок
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 6
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item6.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Выбираете готовые узоры или создаёте свои и расписываете фасад матрешки
+						.master-class-tabs-tab-main-item
+							.master-class-tabs-tab-main-item__num 7
+							img.master-class-tabs-tab-main-item__img(src="assets/images/master-item7.jpg", alt="")
+							.master-class-tabs-tab-main-item__text Пока вы пьёте чай, мастер обработает матрёшку по Вашему желанию
+				.master-class-tabs-tab#masterTab2
+					.master-class-tabs-tab__title Фотоотчёты с мастерклассов
+					.master-class-tabs-tab-main
+						.master-class-tabs-tab-main-album
+							a(data-fancybox="album1" href="assets/images/portfolio-item.jpg")
+								img.master-class-tabs-tab-main-album__img(src="assets/images/portfolio-item.jpg", alt="")
+							.master-class-tabs-tab-main-album__photos
+								a(data-fancybox="album1" href="assets/images/portfolio-item.jpg")
+								a(data-fancybox="album1" href="assets/images/portfolio-item.jpg")
+								a(data-fancybox="album1" href="assets/images/portfolio-item.jpg")
+								a(data-fancybox="album1" href="assets/images/portfolio-item.jpg")
+							.master-class-tabs-tab-main-album__text Альбом 1
+						.master-class-tabs-tab-main-album
+							a(data-fancybox="album2" href="assets/images/portfolio-item.jpg")
+								img.master-class-tabs-tab-main-album__img(src="assets/images/portfolio-item.jpg", alt="")
+							.master-class-tabs-tab-main-album__text Альбом 2
+						.master-class-tabs-tab-main-album
+							a(data-fancybox="album3" href="assets/images/portfolio-item.jpg")
+								img.master-class-tabs-tab-main-album__img(src="assets/images/portfolio-item.jpg", alt="")
+							.master-class-tabs-tab-main-album__text Альбом 3
+						.master-class-tabs-tab-main-album
+							a(data-fancybox="album4" href="assets/images/portfolio-item.jpg")
+								img.master-class-tabs-tab-main-album__img(src="assets/images/portfolio-item.jpg", alt="")
+							.master-class-tabs-tab-main-album__text Альбом 4
+						.master-class-tabs-tab-main-album
+							a(data-fancybox="album5" href="assets/images/portfolio-item.jpg")
+								img.master-class-tabs-tab-main-album__img(src="assets/images/portfolio-item.jpg", alt="")
+							.master-class-tabs-tab-main-album__text Альбом 5
+				.master-class-tabs-tab#masterTab3
+					.master-class-tabs-tab__title Запись на мастеркласс
+					p Стоимость посещения для одного человека — 1000 рублей
+					p Стоимость посещения для группы от 5-ти человек — 800 рублей
+					p Стоимость посещения для группы от 10-ти человек — 500 рублей
+					form.master-class-tabs-tab-form(action="")
+						.master-class-tabs-tab-form-pair
+							label.master-class-tabs-tab-form-pair__label(for="date") Выберите дату
+							input.master-class-tabs-tab-form-pair__input(type="text" name="date" id="date" placeholder="00.00.2000" onfocus="this.placeholder = ''" onblur="this.placeholder = '00.00.2000'")
+						.master-class-tabs-tab-form-pair
+							label.master-class-tabs-tab-form-pair__label(for="fio") ФИО
+							input.master-class-tabs-tab-form-pair__input(type="text" name="fio" id="fio" placeholder="Ваше имя" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше имя'")
+						.master-class-tabs-tab-form-pair
+							label.master-class-tabs-tab-form-pair__label(for="tel") Телефон:
+							input.master-class-tabs-tab-form-pair__input(type="tel" name="tel" id="tel" placeholder="+7 (986) 543-21-00" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 (986) 543-21-00'")

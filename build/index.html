@@ -9,35 +9,62 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" type="text/css" href="assets/scripts/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="assets/scripts/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/scripts/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/datePiker.js"></script>
     <script src="assets/scripts/main.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="header-wrap">
-          <nav class="header-menu"><a class="header-menu__item" href="#">Матрёшки</a><a class="header-menu__item" href="#">Наша мастерская</a><a class="header-menu__item" href="#">Клиенты</a><a class="header-menu__item" href="#">Гарантии</a><a class="header-menu__item" href="#">Отзывы</a></nav><a href="index.html"><img class="heder__logo" src="assets/images/logo.png" alt="Логотип"></a>
-          <div class="header-phone"><img class="header-phone__img" src="assets/images/phone.svg" alt="Телефон"><a class="header-phone__text" href="tel:88129876543">8 (812) 987-65-43</a></div>
-          <div class="header-location"><img class="header-location__img" src="assets/images/marker.svg" alt="Место">
-            <div class="header-location__text">г. Санкт-Петербург ул. Гороховая д. 5</div>
+          <nav class="header-menu">
+            <div class="div"><a class="header-menu__logo-wrap" href="index.html">
+                <div class="header-menu__logo"></div></a></div>
+            <div class="header-menu-phone"><a href="tel:88129876543">
+                <div class="header-menu-phone__img"></div><span class="header-menu-phone__text">8 (812) 987-65-43</span></a></div>
+            <div class="header-menu-location">
+              <div class="header-menu-location__img"></div><span class="header-menu-location__text">г. Санкт-Петербург ул. Гороховая д. 5</span>
+            </div>
+            <div class="header-menu-cart"><a href="#">
+                <div class="header-menu-cart__img"></div><span class="header-menu-cart__text">Корзина</span></a></div><a class="header-menu__item" href="#">Матрёшки</a><a class="header-menu__item" href="#">Наша мастерская</a><a class="header-menu__item" href="#">Клиенты</a><a class="header-menu__item" href="#">Гарантии</a><a class="header-menu__item" href="#">Отзывы</a>
+          </nav>
+          <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="header__logo-wrap" href="index.html">
+            <div class="header__logo"></div></a>
+          <div class="header-phone"><a href="tel:88129876543">
+              <div class="header-phone__img"></div><span class="header-phone__text">8 (812) 987-65-43</span></a></div>
+          <div class="header-location">
+            <div class="header-location__img"></div><span class="header-location__text">г. Санкт-Петербург ул. Гороховая д. 5</span>
           </div>
-          <div class="header-cart"><img class="header-cart__img" src="assets/images/cart.svg" alt="Корзина"><a class="header-cart__text" href="#">Корзина</a></div>
+          <div class="header-cart"><a href="#">
+              <div class="header-cart__img"></div><span class="header-cart__text">Корзина</span></a></div>
+        </div>
+        <div class="breadcrumbs-wrap"><a class="breadcrumbs-link" href="#">Главная</a>
+          <div class="breadcrumbs-arr"></div>
+          <div class="breadcrumbs-link" href="#">Портфолио</div>
         </div>
       </header>
       <div class="banner">
         <div class="containerWide">
           <div class="banner-block">
             <div class="banner-block-left">
-              <div class="banner-block-left__title">Уникальная художественная мастерская <span>Малина</span></div><a class="banner-block-left__btn" href="#">Узнать больше</a>
+              <div class="banner-block-left__title">Художественная мастерская <span>Малина</span></div><a class="banner-block-left__btn" href="#">Узнать больше</a>
               <div class="banner-block-left__text">Роспись <span>матрёшек</span>, создание <span>заготовок</span>, роспись <span>посуды</span> и многое другое</div>
             </div>
             <div class="banner-block-right"><img class="banner-block-right__img" src="assets/images/banner.png" alt=""></div>
           </div>
         </div>
-        <div class="banner-bot"><img class="banner-bot__doll" src="assets/images/banner-doll.svg" alt=""><img class="banner-bot__line" src="assets/images/banner-line.svg" alt=""></div>
+        <div class="banner-bot"><svg class="banner-bot__doll" width="21" height="32" viewBox="0 0 21 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.127 11.2837L16.9855 11.5787L17.1991 11.8265C19.2918 14.2543 20.5001 17.6876 20.5 21.3333C20.5 25.3284 19.0772 29.0117 16.6342 31.4541C16.6033 31.4849 16.5641 31.5 16.5268 31.5H4.47325C4.43603 31.5 4.39674 31.4849 4.3657 31.454L4.01314 31.8085L4.36659 31.4549C1.92308 29.0126 0.5 25.3288 0.5 21.3333C0.5 17.6876 1.70816 14.2543 3.80096 11.8265L4.01457 11.5787L3.87303 11.2837C3.38235 10.2611 3.12502 9.13446 3.12502 8C3.12502 3.85725 6.44105 0.5 10.5 0.5C14.559 0.5 17.875 3.85725 17.875 8C17.875 9.13445 17.6177 10.2611 17.127 11.2837Z" stroke="#FFFFFF"/>
+</svg>
+<svg class="banner-bot__line" width="1" height="44" viewBox="0 0 1 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 0C0.223891 0 0 1.78022 0 3.98022V40.0198C0 42.2198 0.223891 44 0.5 44C0.77611 44 1 42.2198 1 40.0198V3.98022C0.999872 1.78022 0.77611 0 0.5 0Z" fill="#FFFFFF"/>
+</svg>
+        </div>
       </div>
       <div class="about">
         <div class="container">
@@ -122,8 +149,10 @@
 </defs>
 </svg>
                 </div>
-                <div class="about-block-dolls-item__num">100%</div>
-                <div class="about-block-dolls-item__text">Ручная работа</div>
+                <div class="about-block-dolls-item__num mobile-hide">100%</div>
+                <div class="about-block-dolls-item__num mobile-show"></div>
+                <div class="about-block-dolls-item__text mobile-hide">Ручная работа</div>
+                <div class="about-block-dolls-item__text mobile-show">Своя лакировочная  </div>
               </div>
               <div class="about-block-dolls-item">
                 <div class="about-block-dolls-item__doll"><svg width="211" height="280" viewBox="0 0 211 280" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,10 +178,16 @@
 </defs>
 </svg>
                 </div>
-                <div class="about-block-dolls-item__num"> </div>
-                <div class="about-block-dolls-item__text">Своя лакировочная                </div>
+                <div class="about-block-dolls-item__num mobile-hide"> </div>
+                <div class="about-block-dolls-item__num mobile-show">100%</div>
+                <div class="about-block-dolls-item__text mobile-hide">Своя лакировочная  </div>
+                <div class="about-block-dolls-item__text mobile-show">Ручная работа  </div>
               </div>
-            </div><a class="about-block__btn" href="#">История компании</a>
+            </div>
+            <div class="about-block__btn-wrap">  <a class="about-block__btn" href="#">
+                История компании<svg width="160" height="16" viewBox="0 0 160 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M159.707 8.70711C160.098 8.31658 160.098 7.68342 159.707 7.29289L153.343 0.928932C152.953 0.538408 152.319 0.538408 151.929 0.928932C151.538 1.31946 151.538 1.95262 151.929 2.34315L157.586 8L151.929 13.6569C151.538 14.0474 151.538 14.6805 151.929 15.0711C152.319 15.4616 152.953 15.4616 153.343 15.0711L159.707 8.70711ZM0 9H159V7H0V9Z" fill="black"/>
+</svg></a></div>
           </div>
         </div>
       </div>
@@ -160,20 +195,30 @@
         <div class="work-wrap">
           <div class="work__title">Широкий спектр выполняемых работ</div>
           <div class="work-main">
-            <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
-              <div class="work-main-item__title">Матрешка с длинным логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+            <div class="work-main__arrow arrow-prev"><svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 1.5L1.5 21L21 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+</svg>
             </div>
-            <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
-              <div class="work-main-item__title">Матрешка с логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+            <div class="work-main__arrow arrow-next"><svg width="23" height="42" viewBox="0 0 23 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 1.5L21 21L1.5 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+</svg>
             </div>
-            <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
-              <div class="work-main-item__title">Матрешка с очень длинным логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
-            </div>
-            <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
-              <div class="work-main-item__title">Матрешка с логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
-            </div>
-            <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
-              <div class="work-main-item__title">Матрешка с логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+            <div class="work-main-inn">
+              <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
+                <div class="work-main-item__title">Матрешка с длинным логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+              </div>
+              <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
+                <div class="work-main-item__title">Матрешка с логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+              </div>
+              <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
+                <div class="work-main-item__title">Матрешка с очень длинным логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+              </div>
+              <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
+                <div class="work-main-item__title">Матрешка с логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+              </div>
+              <div class="work-main-item"><img class="work-main-item__img" src="assets/images/work-item.png" alt="">
+                <div class="work-main-item__title">Матрешка с логотипом</div><a class="work-main-item__btn" href="#">Подробнее</a>
+              </div>
             </div>
           </div>
         </div>
@@ -187,42 +232,68 @@
               <li><a class="shop-tabs-navigation-item" href="#shopSecondTab">Готовая продукция</a></li>
             </ul>
             <div class="shop-tabs-tab" id="shopFirstTab">
-              <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
-                <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
-                <div class="shop-tabs-tab-item-bot">
-                  <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
-                </div>
+              <div class="shop-tabs-tab__arrow arrow-prev"><svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 1.5L1.5 21L21 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+</svg>
               </div>
-              <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
-                <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
-                <div class="shop-tabs-tab-item-bot">
-                  <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
-                </div>
+              <div class="shop-tabs-tab__arrow arrow-next"><svg width="23" height="42" viewBox="0 0 23 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 1.5L21 21L1.5 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+</svg>
               </div>
-              <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
-                <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
-                <div class="shop-tabs-tab-item-bot">
-                  <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+              <div class="shop-tabs-tab-inn">
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
                 </div>
-              </div>
-              <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
-                <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
-                <div class="shop-tabs-tab-item-bot">
-                  <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
                 </div>
-              </div>
-              <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
-                <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
-                <div class="shop-tabs-tab-item-bot">
-                  <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
+                </div>
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
+                </div>
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="shop-tabs-tab" id="shopSecondTab">
-              <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
-                <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
-                <div class="shop-tabs-tab-item-bot">
-                  <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+              <div class="shop-tabs-tab__arrow arrow-prev"><svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 1.5L1.5 21L21 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+</svg>
+              </div>
+              <div class="shop-tabs-tab__arrow arrow-next"><svg width="23" height="42" viewBox="0 0 23 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 1.5L21 21L1.5 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+</svg>
+              </div>
+              <div class="shop-tabs-tab-inn">
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
+                </div>
+                <div class="shop-tabs-tab-item"><img class="shop-tabs-tab-item__img" src="assets/images/work-item.png" alt="">
+                  <div class="shop-tabs-tab-item__title">Матрешка с длинным логотипом</div>
+                  <div class="shop-tabs-tab-item-bot">
+                    <div class="shop-tabs-tab-item-bot__price">3567 руб</div><a class="shop-tabs-tab-item-bot__btn" href="#">Купить</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -314,7 +385,8 @@
             <div class="form-data-pair">
               <label class="form-data-pair__label" for="tel">Телефон:</label>
               <input class="form-data-pair__input" type="tel" name="tel" id="tel" placeholder="+7 (986) 543-21-00" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 (986) 543-21-00'">
-            </div><a class="form-data__btn" href="#">Отправить</a>
+            </div>
+            <button class="form-data__btn" type="submit" data-default="Заказать звонок">Отправить</button>
           </form>
         </div>
       </div>
@@ -328,7 +400,13 @@
               </div>
               <div class="footer-block-contacts-pair">
                 <div class="footer-block-contacts-pair__label">Мы в социльных сетях</div>
-                <div class="footer-block-contacts-pair-socials"> <a class="footer-block-contacts-pair-socials-item" href="#"><img src="assets/images/fb.png" alt=""></a><a class="footer-block-contacts-pair-socials-item" href="#"><img src="assets/images/vk.png" alt=""></a><a class="footer-block-contacts-pair-socials-item" href="#"><img src="assets/images/twit.png" alt=""></a></div>
+                <div class="footer-block-contacts-pair-socials"> <a class="footer-block-contacts-pair-socials-item" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.33333 0H26.6667H32V5.33369V26.6663V32H26.6667H20.9778V19.9111H26.3111V14.5778H20.9778V12.453C20.9778 11.595 21.5282 11.0222 22 11.0222H26.3111V5.68889H22C18.6908 5.68889 16 8.91627 16 12.4999V14.5778H12.0889V19.9111H16V32H5.33369H0V26.6663V5.33369V0H5.33333Z" fill="#DC143C"/>
+</svg></a><a class="footer-block-contacts-pair-socials-item" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V32H32V0H0ZM23.9893 17.7039C24.7239 18.4205 25.5007 19.0953 26.16 19.8875C26.4513 20.2376 26.7269 20.5988 26.9369 21.0044C27.235 21.5857 26.9648 22.2224 26.4456 22.2575L23.2193 22.2561C22.3865 22.3245 21.7229 21.9888 21.1632 21.419C20.7181 20.9654 20.3021 20.4799 19.8725 20.0108C19.6977 19.8177 19.5128 19.6371 19.293 19.4931C18.8523 19.2075 18.47 19.2942 18.2181 19.7532C17.9618 20.2208 17.9016 20.74 17.878 21.2607C17.8429 22.0208 17.6136 22.2196 16.8507 22.2562C15.2185 22.3318 13.6705 22.0838 12.2329 21.2621C10.9633 20.5373 9.98084 19.5124 9.12549 18.3536C7.45853 16.0943 6.18184 13.614 5.03553 11.0623C4.77644 10.4872 4.9657 10.179 5.5981 10.1679C6.65234 10.1471 7.70616 10.1496 8.75893 10.1665C9.18717 10.1737 9.4713 10.4184 9.63509 10.823C10.2048 12.2229 10.9017 13.5553 11.7765 14.7915C12.0105 15.1204 12.2484 15.4479 12.5856 15.6801C12.9593 15.9378 13.2449 15.8536 13.4212 15.435C13.5333 15.1692 13.5824 14.8865 13.606 14.6023C13.6899 13.6294 13.6999 12.6555 13.5556 11.6855C13.466 11.0792 13.1231 10.6872 12.5185 10.5725C12.2104 10.5137 12.2566 10.4005 12.405 10.2238C12.6655 9.92035 12.9106 9.7311 13.3961 9.7311H17.0425C17.6176 9.84327 17.7466 10.1023 17.8247 10.6803L17.8276 14.7327C17.8208 14.9566 17.9398 15.6199 18.3414 15.7668C18.6632 15.8732 18.8775 15.6141 19.0706 15.4099C19.9439 14.4832 20.567 13.3875 21.1238 12.2537C21.3703 11.7553 21.5832 11.2375 21.7903 10.7193C21.9429 10.3359 22.1809 10.147 22.6134 10.1538L26.124 10.1581C26.2275 10.1581 26.334 10.1581 26.4361 10.1749C27.0266 10.2771 27.189 10.5319 27.0055 11.1098C26.7188 12.0153 26.1573 12.7714 25.6101 13.5285C25.0235 14.3391 24.3993 15.1213 23.8171 15.9361C23.2852 16.6823 23.3272 17.0574 23.9893 17.7039Z" fill="#DC143C"/>
+</svg></a><a class="footer-block-contacts-pair-socials-item" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V32H32V0H0ZM24.8089 11.482C24.8175 11.677 24.8219 11.8731 24.8219 12.0699C24.8219 18.0763 20.2504 25.0018 11.8902 25.0018C9.32346 25.0018 6.93437 24.2495 4.92301 22.9597C5.27859 23.002 5.6403 23.0235 6.00728 23.0235C8.13672 23.0235 10.0965 22.2969 11.6521 21.0776C9.66316 21.0411 7.98453 19.727 7.40607 17.9212C7.68373 17.9744 7.96849 18.003 8.26135 18.003C8.67587 18.003 9.07745 17.9471 9.45885 17.8435C7.37969 17.4258 5.81289 15.5889 5.81289 13.3868C5.81289 13.3676 5.81289 13.3486 5.81331 13.3296C6.42602 13.67 7.12679 13.8745 7.87193 13.8981C6.65227 13.0831 5.85009 11.6918 5.85009 10.1151C5.85009 9.28204 6.07423 8.50138 6.46555 7.82994C8.70716 10.5799 12.0563 12.3893 15.8337 12.579C15.7561 12.2462 15.7157 11.8993 15.7157 11.5431C15.7157 9.03321 17.7509 6.99822 20.2609 6.99822C21.5682 6.99822 22.7495 7.5501 23.5785 8.43337C24.6137 8.22977 25.5865 7.85132 26.4647 7.33053C26.1254 8.39195 25.4048 9.28246 24.4663 9.8451C25.3858 9.73517 26.2617 9.49078 27.0768 9.12928C26.4676 10.0407 25.6971 10.8412 24.8089 11.482Z" fill="#DC143C"/>
+</svg></a></div>
               </div>
               <div class="footer-block-contacts-pair">
                 <div class="footer-block-contacts-pair__label">Свяжитесь с нами</div><a class="footer-block-contacts-pair__info" href="mailto:info@malina.ru">info@malina.ru</a>

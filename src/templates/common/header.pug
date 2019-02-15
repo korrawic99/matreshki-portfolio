@@ -1,19 +1,42 @@
 header.header
 	.header-wrap
 		nav.header-menu
+			.div
+				a.header-menu__logo-wrap(href="index.html")
+					.header-menu__logo
+			.header-menu-phone
+				a(href="tel:88129876543")
+					.header-menu-phone__img
+					span.header-menu-phone__text 8 (812) 987-65-43
+			.header-menu-location
+				.header-menu-location__img
+				span.header-menu-location__text г. Санкт-Петербург ул. Гороховая д. 5
+			.header-menu-cart
+				a(href="#")
+					.header-menu-cart__img
+					span.header-menu-cart__text Корзина
 			a.header-menu__item(href="#") Матрёшки
 			a.header-menu__item(href="#") Наша мастерская
 			a.header-menu__item(href="#") Клиенты
 			a.header-menu__item(href="#") Гарантии
 			a.header-menu__item(href="#") Отзывы
-		a(href="index.html")
-			img.heder__logo(src="assets/images/logo.png", alt="Логотип")
+		button.hamburger.hamburger--collapse(type="button")
+			span.hamburger-box
+				span.hamburger-inner
+		a.header__logo-wrap(href="index.html")
+			.header__logo
 		.header-phone
-			img.header-phone__img(src="assets/images/phone.svg", alt="Телефон")
-			a.header-phone__text(href="tel:88129876543") 8 (812) 987-65-43
+			a(href="tel:88129876543")
+				.header-phone__img
+				span.header-phone__text 8 (812) 987-65-43
 		.header-location
-			img.header-location__img(src="assets/images/marker.svg", alt="Место")
-			.header-location__text г. Санкт-Петербург ул. Гороховая д. 5
+			.header-location__img
+			span.header-location__text г. Санкт-Петербург ул. Гороховая д. 5
 		.header-cart
-			img.header-cart__img(src="assets/images/cart.svg", alt="Корзина")
-			a.header-cart__text(href="#") Корзина
+			a(href="#")
+				.header-cart__img
+				span.header-cart__text Корзина
+	.breadcrumbs-wrap
+		a.breadcrumbs-link(href="#") Главная
+		.breadcrumbs-arr
+		.breadcrumbs-link(href="#") Портфолио

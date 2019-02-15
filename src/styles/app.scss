@@ -14,7 +14,7 @@ body{
 }
 a{
 	text-decoration: none;
-	color: inherit;
+	color: unset;
 }
 ul{
 	list-style: none;
@@ -38,6 +38,9 @@ ul{
 }
 
 @import 'common/keyframes';
+@import 'common/animated';
+@import 'common/hamburgers.min';
+@import 'common/datePiker';
 @import 'common/adaptive';
 @import 'common/normalize'; 
 @import 'common/fonts'; 
@@ -45,5 +48,9 @@ ul{
 @import 'common/footer';
 @import 'pages/main'; 
 @import 'pages/index'; 
-@import 'pages/portfolio'; 
+@import 'pages/portfolio';
+@import 'pages/trend';
+@import 'pages/about';
+@import 'pages/contacts';
+@import 'pages/master';
 

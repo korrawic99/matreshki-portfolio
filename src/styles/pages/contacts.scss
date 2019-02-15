@@ -1,0 +1,59 @@
+.contacts{
+	&-info{
+		font-family: "Museo Sans Cyrl";
+		padding-top: 220px;
+		margin-bottom: 90px;
+		&-wrap{
+			max-width: 1145px;
+			width: 95%;
+			margin: 0 auto;
+			position: relative;
+		}
+		&-block{
+			display: flex;
+			justify-content: space-between;
+		}
+		&-left{
+			&__title{
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 40px;
+			}
+			&__text{
+				font-family: "Museo Sans Cyrl Light";
+				font-size: 18px;
+				margin: 20px 0;
+				display: block;
+			}
+			&__num{
+				display: block;
+				font-size: 20px;
+				margin-top: 45px;
+				margin-bottom: 10px;
+			}
+			&__time{
+				font-size: 14px;
+				font-family: "Museo Sans Cyrl Light";
+				display: flex;
+				align-items: center;
+				&:before{
+					content: '';
+					display: block;
+					width: 9px;
+					height: 9px;
+					border-radius: 50%;
+					background: #4CB432;
+					margin-right: 10px;
+				}
+			}
+		}
+		&-right{
+			width: 800px;
+			height: 440px;
+		}
+	}
+	&-connect-form{
+		background-image: url(../images/work-ornament.svg);
+		background-size: contain;
+	}
+}

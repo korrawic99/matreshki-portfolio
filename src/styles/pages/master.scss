@@ -1,0 +1,107 @@
+.master{
+	&-class{
+		font-family: 'Museo Sans Cyrl';
+		&-wrap{
+			max-width: 1400px;
+			width: 97%;
+			margin: 0 auto;
+			position: relative;
+		}
+		&-tabs{
+			padding-top: 220px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 60px;
+			&-navigation{
+				margin: 0;
+				border: 1px solid #7F7F7F;
+				border-radius: 50px;
+				display: flex;
+				justify-content: space-between;
+				overflow: hidden;
+				margin-bottom: 45px;
+				&__item{
+					display: block;
+					padding: 15px 20px;
+					margin: 0;
+					font-family: "Museo Sans Cyrl Light";
+					&.selected{
+						background: #DC143C;
+						color: #fff;
+					}
+				}
+				li:nth-child(2) a{
+					border-left: 1px solid #7F7F7F;
+					border-right: 1px solid #7F7F7F;
+				}
+			}
+			&-tab{
+				align-self: stretch;
+				&__title{
+					font-weight: bold;
+					font-size: 36px;
+				}
+				&__text{
+					margin-top: 40px;
+					font-family: "Museo Sans Cyrl Light";
+					line-height: 27px;
+					font-size: 18px;
+				}
+				&-main{
+					margin-top: 40px; 
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+					&-item{
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						width: 200px;
+						margin-bottom: 20px;
+						img{
+							width: 100%;
+						}
+						&__num{
+							margin-bottom: 15px;
+							font-size: 24px;
+							color: #6D6D6D;
+						}
+						&__img{
+							height: 150px;
+							margin-bottom: 50px;
+						}
+						&__text{
+							font-family: "Museo Sans Cyrl Light";
+							text-align: center;
+							padding: 0 10px; 
+							font-size: 16px;
+						}
+					}
+					&-album{
+						width: 325px;
+						margin: 0 10px 20px;
+						img{
+							width: 100%;
+						}
+						&__photos{
+							display: none;
+						}
+						&__text{
+							font-size: 14px;
+							font-family: 'Museo Sans Cyrl Lightest';
+							text-align: center;
+							margin-top: 15px;
+							margin-bottom: 15px;
+						}
+					}
+				}
+				p{
+					font-family: "Museo Sans Cyrl Light";
+					font-size: 16px;
+					margin: 20px 0;
+				}
+			}
+		}
+	}
+}

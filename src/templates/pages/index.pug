@@ -8,14 +8,18 @@ block content
 		.containerWide
 			.banner-block
 				.banner-block-left
-					.banner-block-left__title Уникальная художественная мастерская <span>Малина</span>
+					.banner-block-left__title Художественная мастерская <span>Малина</span>
 					a.banner-block-left__btn(href="#") Узнать больше
 					.banner-block-left__text Роспись <span>матрёшек</span>, создание <span>заготовок</span>, роспись <span>посуды</span> и многое другое
 				.banner-block-right
 					img.banner-block-right__img(src="assets/images/banner.png", alt="")
 		.banner-bot
-			img.banner-bot__doll(src="assets/images/banner-doll.svg", alt="")
-			img.banner-bot__line(src="assets/images/banner-line.svg", alt="")
+			<svg class="banner-bot__doll" width="21" height="32" viewBox="0 0 21 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M17.127 11.2837L16.9855 11.5787L17.1991 11.8265C19.2918 14.2543 20.5001 17.6876 20.5 21.3333C20.5 25.3284 19.0772 29.0117 16.6342 31.4541C16.6033 31.4849 16.5641 31.5 16.5268 31.5H4.47325C4.43603 31.5 4.39674 31.4849 4.3657 31.454L4.01314 31.8085L4.36659 31.4549C1.92308 29.0126 0.5 25.3288 0.5 21.3333C0.5 17.6876 1.70816 14.2543 3.80096 11.8265L4.01457 11.5787L3.87303 11.2837C3.38235 10.2611 3.12502 9.13446 3.12502 8C3.12502 3.85725 6.44105 0.5 10.5 0.5C14.559 0.5 17.875 3.85725 17.875 8C17.875 9.13445 17.6177 10.2611 17.127 11.2837Z" stroke="#FFFFFF"/>
+			</svg>
+			<svg class="banner-bot__line" width="1" height="44" viewBox="0 0 1 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0.5 0C0.223891 0 0 1.78022 0 3.98022V40.0198C0 42.2198 0.223891 44 0.5 44C0.77611 44 1 42.2198 1 40.0198V3.98022C0.999872 1.78022 0.77611 0 0.5 0Z" fill="#FFFFFF"/>
+			</svg>
 	
 	.about
 		.container
@@ -98,8 +102,10 @@ block content
 								</linearGradient>
 								</defs>
 							</svg>
-						.about-block-dolls-item__num 100%
-						.about-block-dolls-item__text Ручная работа
+						.about-block-dolls-item__num.mobile-hide 100%
+						.about-block-dolls-item__num.mobile-show
+						.about-block-dolls-item__text.mobile-hide Ручная работа
+						.about-block-dolls-item__text.mobile-show Своя лакировочная  
 					.about-block-dolls-item
 						.about-block-dolls-item__doll
 							<svg width="211" height="280" viewBox="0 0 211 280" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,34 +130,49 @@ block content
 								</linearGradient>
 								</defs>
 							</svg>
-						.about-block-dolls-item__num 
-						.about-block-dolls-item__text Своя лакировочная                
-				a.about-block__btn(href="#") История компании
+						.about-block-dolls-item__num.mobile-hide 
+						.about-block-dolls-item__num.mobile-show 100%
+						.about-block-dolls-item__text.mobile-hide Своя лакировочная  
+						.about-block-dolls-item__text.mobile-show Ручная работа  
+				.about-block__btn-wrap   
+					a.about-block__btn(href="#") История компании
+						<svg width="160" height="16" viewBox="0 0 160 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M159.707 8.70711C160.098 8.31658 160.098 7.68342 159.707 7.29289L153.343 0.928932C152.953 0.538408 152.319 0.538408 151.929 0.928932C151.538 1.31946 151.538 1.95262 151.929 2.34315L157.586 8L151.929 13.6569C151.538 14.0474 151.538 14.6805 151.929 15.0711C152.319 15.4616 152.953 15.4616 153.343 15.0711L159.707 8.70711ZM0 9H159V7H0V9Z" fill="black"/>
+						</svg>
 		
 	.work
 		.work-wrap
 			.work__title Широкий спектр выполняемых работ
 			.work-main
-				.work-main-item
-					img.work-main-item__img(src="assets/images/work-item.png", alt="")
-					.work-main-item__title Матрешка с длинным логотипом
-					a.work-main-item__btn(href="#") Подробнее
-				.work-main-item
-					img.work-main-item__img(src="assets/images/work-item.png", alt="")
-					.work-main-item__title Матрешка с логотипом
-					a.work-main-item__btn(href="#") Подробнее
-				.work-main-item
-					img.work-main-item__img(src="assets/images/work-item.png", alt="")
-					.work-main-item__title Матрешка с очень длинным логотипом
-					a.work-main-item__btn(href="#") Подробнее
-				.work-main-item
-					img.work-main-item__img(src="assets/images/work-item.png", alt="")
-					.work-main-item__title Матрешка с логотипом
-					a.work-main-item__btn(href="#") Подробнее
-				.work-main-item
-					img.work-main-item__img(src="assets/images/work-item.png", alt="")
-					.work-main-item__title Матрешка с логотипом
-					a.work-main-item__btn(href="#") Подробнее
+				.work-main__arrow.arrow-prev
+					<svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21 1.5L1.5 21L21 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+				.work-main__arrow.arrow-next
+					<svg width="23" height="42" viewBox="0 0 23 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.5 1.5L21 21L1.5 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+				.work-main-inn
+					.work-main-item
+						img.work-main-item__img(src="assets/images/work-item.png", alt="")
+						.work-main-item__title Матрешка с длинным логотипом
+						a.work-main-item__btn(href="#") Подробнее
+					.work-main-item
+						img.work-main-item__img(src="assets/images/work-item.png", alt="")
+						.work-main-item__title Матрешка с логотипом
+						a.work-main-item__btn(href="#") Подробнее
+					.work-main-item
+						img.work-main-item__img(src="assets/images/work-item.png", alt="")
+						.work-main-item__title Матрешка с очень длинным логотипом
+						a.work-main-item__btn(href="#") Подробнее
+					.work-main-item
+						img.work-main-item__img(src="assets/images/work-item.png", alt="")
+						.work-main-item__title Матрешка с логотипом
+						a.work-main-item__btn(href="#") Подробнее
+					.work-main-item
+						img.work-main-item__img(src="assets/images/work-item.png", alt="")
+						.work-main-item__title Матрешка с логотипом
+						a.work-main-item__btn(href="#") Подробнее
 
 	.shop
 		.shop-wrap
@@ -163,43 +184,67 @@ block content
 					li
 						a.shop-tabs-navigation-item(href="#shopSecondTab") Готовая продукция
 				.shop-tabs-tab#shopFirstTab
-					.shop-tabs-tab-item
-						img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
-						.shop-tabs-tab-item__title Матрешка с длинным логотипом
-						.shop-tabs-tab-item-bot
-							.shop-tabs-tab-item-bot__price 3567 руб
-							a.shop-tabs-tab-item-bot__btn(href="#") Купить
-					.shop-tabs-tab-item
-						img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
-						.shop-tabs-tab-item__title Матрешка с длинным логотипом
-						.shop-tabs-tab-item-bot
-							.shop-tabs-tab-item-bot__price 3567 руб
-							a.shop-tabs-tab-item-bot__btn(href="#") Купить
-					.shop-tabs-tab-item
-						img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
-						.shop-tabs-tab-item__title Матрешка с длинным логотипом
-						.shop-tabs-tab-item-bot
-							.shop-tabs-tab-item-bot__price 3567 руб
-							a.shop-tabs-tab-item-bot__btn(href="#") Купить
-					.shop-tabs-tab-item
-						img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
-						.shop-tabs-tab-item__title Матрешка с длинным логотипом
-						.shop-tabs-tab-item-bot
-							.shop-tabs-tab-item-bot__price 3567 руб
-							a.shop-tabs-tab-item-bot__btn(href="#") Купить
-					.shop-tabs-tab-item
-						img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
-						.shop-tabs-tab-item__title Матрешка с длинным логотипом
-						.shop-tabs-tab-item-bot
-							.shop-tabs-tab-item-bot__price 3567 руб
-							a.shop-tabs-tab-item-bot__btn(href="#") Купить
+					.shop-tabs-tab__arrow.arrow-prev
+						<svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 1.5L1.5 21L21 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					.shop-tabs-tab__arrow.arrow-next
+						<svg width="23" height="42" viewBox="0 0 23 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.5 1.5L21 21L1.5 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					.shop-tabs-tab-inn
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
 				.shop-tabs-tab#shopSecondTab
-					.shop-tabs-tab-item
-						img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
-						.shop-tabs-tab-item__title Матрешка с длинным логотипом
-						.shop-tabs-tab-item-bot
-							.shop-tabs-tab-item-bot__price 3567 руб
-							a.shop-tabs-tab-item-bot__btn(href="#") Купить
+					.shop-tabs-tab__arrow.arrow-prev
+						<svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 1.5L1.5 21L21 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					.shop-tabs-tab__arrow.arrow-next
+						<svg width="23" height="42" viewBox="0 0 23 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.5 1.5L21 21L1.5 40.5" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					.shop-tabs-tab-inn
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
+						.shop-tabs-tab-item
+							img.shop-tabs-tab-item__img(src="assets/images/work-item.png", alt="")
+							.shop-tabs-tab-item__title Матрешка с длинным логотипом
+							.shop-tabs-tab-item-bot
+								.shop-tabs-tab-item-bot__price 3567 руб
+								a.shop-tabs-tab-item-bot__btn(href="#") Купить
 
 	.process
 		.container
@@ -284,4 +329,4 @@ block content
 				.form-data-pair
 					label.form-data-pair__label(for="tel") Телефон:
 					input.form-data-pair__input(type="tel" name="tel" id="tel" placeholder="+7 (986) 543-21-00" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 (986) 543-21-00'")
-				a.form-data__btn(href="#") Отправить
+				button.form-data__btn(type="submit" data-default="Заказать звонок") Отправить
