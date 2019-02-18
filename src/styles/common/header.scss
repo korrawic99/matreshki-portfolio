@@ -1,6 +1,21 @@
 .header{   
 	&.header-white{
 		color: #fff;
+		.hamburger-inner,
+		.hamburger-inner:after,
+		.hamburger-inner:before {
+			background-color: #fff;
+		}
+		.hamburger.is-active{
+			.hamburger-inner,
+			.hamburger-inner:after,
+			.hamburger-inner:before {
+				background-color: #DC153D;
+			}
+		}
+		.header-menu__item:hover:after {
+			background-color: #fff;
+		}
 		.header__logo{
 			background: url(../images/logo-white.png) center center no-repeat;
 			background-size: contain;
@@ -52,7 +67,7 @@
 				position: absolute;
 				width: 100%;
 				height: 2px;
-				background-color: #fff;
+				background-color: #000;
 			}
 		}
 		&-phone, &-location, &-cart{

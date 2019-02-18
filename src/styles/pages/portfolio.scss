@@ -78,7 +78,7 @@
 					position: relative;
 				}
 				&__btn{
-					display: flex;
+					display: none;
 					justify-content: center;
 					align-items: center;
 					position: absolute;
@@ -152,6 +152,13 @@
 				width: calc(100% + 4px);
 				li{
 					margin: 10px 0;
+				}
+			}
+			&-tab{
+				&-item{
+					&__btn{
+						display: flex;
+					}
 				}
 			}
 		}

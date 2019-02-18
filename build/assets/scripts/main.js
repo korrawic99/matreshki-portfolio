@@ -1,4 +1,11 @@
 $(document).ready(function () {
+	if(document.title == 'Главная' && screen.width > 1365){
+		$(document).find('header').addClass('header-white');
+	}
+	if(document.title == 'Направление'){
+		$(document).find('header').addClass('header-white');
+	}
+
 	$(document).on('click', '.portfolio-tabs-tab-show', function (e) {
 		e.preventDefault();
 		$(this).toggleClass('active');
@@ -19,9 +26,7 @@ $(document).ready(function () {
 		$(this).addClass('selected');
 		var a = shopTabContainers.filter(this.hash);
 		for (let i = 0; i < shopTabContainers.length; i++) {
-			if (shopTabContainers.eq(i).find('.shop-tabs-tab-inn').hasClass('slick-initialized')) {
-				shopTabContainers.eq(i).find('.shop-tabs-tab-inn').slick('unslick');
-			}
+			shopTabContainers.eq(i).find('.shop-tabs-tab-inn.slick-initialized').slick('unslick');
 		}
 		if (a.attr('style') == '' && screen.width < 768){
 			a.find('.shop-tabs-tab-inn').slick({
@@ -186,10 +191,16 @@ $(document).ready(function () {
 
 $(function () {
 	$(window).resize(function () {
+		if(document.title == 'Главная' && screen.width > 1365){
+			$(document).find('header').addClass('header-white');
+		}
+		if(document.title == 'Главная' && screen.width < 1366){
+			$(document).find('header').removeClass('header-white');
+		}
 		if (screen.width > 767) {
-			$(document).find('.work-main-inn').slick('unslick');
+			$(document).find('.work-main-inn.slick-initialized').slick('unslick');
 			$(document).find('.shop-tabs-tab-inn.slick-initialized').slick('unslick');
-			$(document).find('.master-class-tabs-tab-main-inn').slick('unslick');
+			$(document).find('.master-class-tabs-tab-main-inn.slick-initialized').slick('unslick');
 			var masterTabContainers = $('div.master-class-tabs > div');
 			masterTabContainers.hide().filter(':first').show();
 			$('div.master-class-tabs ul.master-class-tabs-navigation a').click(function () {
@@ -201,15 +212,17 @@ $(function () {
 			}).filter(':first').click();
 		}
 		if (screen.width < 768) {
-			$(document).find('.work-main-inn').slick({
-				arrows: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			});
+			if (!$(document).find('.work-main-inn').hasClass('slick-initialized')){
+				$(document).find('.work-main-inn').slick({
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				});
+			}
 			var tab = $(document).find('.shop-tabs-tab');
 			for (let i = 0; i < tab.length; i++) {
-				if(tab.eq(i).attr('style') == ''){
-					tab.find('.shop-tabs-tab-inn').slick({
+				if((tab.eq(i).attr('style') == '') && (!tab.eq(i).find('.shop-tabs-tab-inn').hasClass('slick-initialized'))){
+					tab.eq(i).find('.shop-tabs-tab-inn').slick({
 						arrows: false,
 						slidesToShow: 1,
 						slidesToScroll: 1,
