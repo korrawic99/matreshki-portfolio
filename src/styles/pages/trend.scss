@@ -87,6 +87,7 @@
 			width: 240px;
 			position: relative;
 			z-index: 2;
+			
 			&-main{
 				position: relative;
 				z-index: 2;
@@ -97,6 +98,7 @@
 			&__title{
 				font-size: 18px;
 				margin-bottom: 20px;
+				font-weight: bold;
 			}
 			&__text{
 				font-family: "Museo Sans Cyrl Light";
@@ -113,6 +115,94 @@
 			@media screen and (min-width:1366px){
 				&:hover svg{
 					left: -150px;
+				}
+			}
+		}
+	}
+}
+
+@include w1024{
+	.trend{
+		&-banner{
+			padding-top: 165px;
+			height: auto;
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			&-block{
+				flex-direction: column;
+				align-items: center;
+			}
+			&-left{
+				margin-bottom: 25px;
+				margin-top: 60px;
+			}
+			&-right{
+				margin: 0;
+				&__title{
+					position: absolute;
+					top: 0;
+					width: 100%;
+					text-align: center;
+				}
+				&__btn{
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+@include w768{
+	.trend{
+		&-info{
+			&-block{
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 30px;
+			}
+			&-item{
+				width: 282px;
+			}
+		}
+	}
+}
+
+@include w480{
+	.trend{
+		&-banner{
+			&-left{
+				margin-top: 45px;
+				width: 100%;
+				&-slider{
+					width: 100%;
+					&-item{
+						img{
+							width: 100%;
+						}
+					}
+				}
+			}
+			&-right{
+				&__title{
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 360px){
+	.trend{
+		&-info{
+			&-item{
+				width: auto;
+				margin-bottom: 20px;
+				&-main{
+					padding: 0;
+					height: auto;
+				}
+				svg{
+					display: none;
 				}
 			}
 		}

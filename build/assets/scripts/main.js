@@ -50,6 +50,18 @@ $(document).ready(function () {
 		portfolioTabContainers.filter(this.hash).show();
 		$('div.portfolio-tabs ul.portfolio-tabs-navigation a').removeClass('selected');
 		$(this).addClass('selected');
+		if($(this).closest('.portfolio-tabs__activeTab').length > 0){
+			$(this).closest('.portfolio-tabs__activeTab').removeClass('active');
+			$(this).closest('.portfolio-tabs-navigation').attr('style', 'display: none');
+		}
+		$(document).find('.portfolio-tabs__activeTab span').text($(this).text());
+		var porfolioLinks = $(document).find('.portfolio-tabs-navigation__item');
+		var currentLink = $('.portfolio-tabs__activeTab').find('span').text();
+		for (let i = 0; i < porfolioLinks.length; i++) {
+			if(porfolioLinks.eq(i).text() == currentLink){
+				porfolioLinks.eq(i).addClass('selected');
+			}
+		}
 		return false;
 	}).filter(':first').click();
 
@@ -96,13 +108,7 @@ $(document).ready(function () {
 		}
 		$(this).toggleClass('is-active');
 	});
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 1) {
-			$(document).find('.header-menu').removeClass('fadeInDown');
-			$(document).find('.header-menu').addClass('fadeOutUp');
-			$(document).find('.hamburger').removeClass('is-active');
-		}
-	});
+
 	$(document).mouseup(function (e) { // событие клика по веб-документу
 		var div = $('.header-menu'); // тут указываем сласс элемента
 		if ($('.hamburger').is(e.target) || $('.hamburger-box').is(e.target) || $('.hamburger-inner').is(e.target)) {
@@ -128,7 +134,19 @@ $(document).ready(function () {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 		});
+		var masterTabs = $(document).find('.master-class-tabs-tab');
+		for (let i = 0; i < masterTabs.length; i++) {
+			masterTabs.eq(i).attr('style', '');
+		};
+		$(document).find('.master-class-tabs-tab-main-inn').slick({
+			arrows: true,
+			dots: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false
+		});
 	}
+
 	$(document).on('click', '.work-main__arrow.arrow-prev', function (e) {
 		$(document).find('.work-main-inn').slick('slickPrev');
 	});
@@ -143,8 +161,26 @@ $(document).ready(function () {
 	});
 
 	pickmeup('#date', {
-		position       : 'right',
+		position       : 'bottom',
 		hide_on_select : true
+	});
+
+	$('.portfolio-tabs__activeTab').find('.portfolio-tabs-navigation__item').eq(0).addClass('selected');
+	$(document).on('click', '.portfolio-tabs__activeTab', function (e) {
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).find('.portfolio-tabs-navigation').attr('style', 'display: none');
+		} else {
+			$(this).addClass('active');
+			$(this).find('.portfolio-tabs-navigation').attr('style', 'display: flex');
+		}
+	});
+
+	$(document).on('click', '.fancybox-content', function () {
+		return false;
+	});
+	$(document).on('click', '.fancybox-slide', function () {
+		$.fancybox.close();
 	});
 });
 
@@ -153,6 +189,16 @@ $(function () {
 		if (screen.width > 767) {
 			$(document).find('.work-main-inn').slick('unslick');
 			$(document).find('.shop-tabs-tab-inn.slick-initialized').slick('unslick');
+			$(document).find('.master-class-tabs-tab-main-inn').slick('unslick');
+			var masterTabContainers = $('div.master-class-tabs > div');
+			masterTabContainers.hide().filter(':first').show();
+			$('div.master-class-tabs ul.master-class-tabs-navigation a').click(function () {
+				masterTabContainers.hide();
+				masterTabContainers.filter(this.hash).show();
+				$('div.master-class-tabs ul.master-class-tabs-navigation a').removeClass('selected');
+				$(this).addClass('selected');
+				return false;
+			}).filter(':first').click();
 		}
 		if (screen.width < 768) {
 			$(document).find('.work-main-inn').slick({
@@ -167,6 +213,22 @@ $(function () {
 						arrows: false,
 						slidesToShow: 1,
 						slidesToScroll: 1,
+					});
+				}
+			}
+			var masterTabs = $(document).find('.master-class-tabs-tab');
+			for (let i = 0; i < masterTabs.length; i++) {
+				masterTabs.eq(i).attr('style', '');
+			}
+			var masterTabsSleders = $(document).find('.master-class-tabs-tab-main-inn');
+			for (let i = 0; i < masterTabsSleders.length; i++) {
+				if(!masterTabsSleders.eq(i).hasClass('slick-initialized')){
+					masterTabsSleders.eq(i).slick({
+						arrows: true,
+						dots: false,
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: false
 					});
 				}
 			}

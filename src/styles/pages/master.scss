@@ -49,16 +49,52 @@
 					font-size: 18px;
 				}
 				&-main{
-					margin-top: 40px; 
-					display: flex;
-					justify-content: center;
-					flex-wrap: wrap;
-					&-item{
+					&-inn{
+						margin-top: 40px; 
 						display: flex;
-						flex-direction: column;
-						align-items: center;
-						width: 200px;
-						margin-bottom: 20px;
+						justify-content: center;
+						flex-wrap: wrap;
+						.slick-prev, .slick-next{
+							width: 50px;
+							height: 50px;
+							border: 2px solid #6D6D6D;
+							border-radius: 50%;
+							z-index: 2;
+							bottom: -15px;
+							top: auto;
+							&:before{
+								display: none;
+							}
+						}
+						.slick-prev{
+							background: url('../images/master-slider-prev.svg') center no-repeat;
+							background-color: #fff;
+							left: 0;
+							&.slick-disabled{
+								border: 2px solid #CECECE;
+								background: url('../images/master-slider-prev-disabled.svg') center no-repeat;
+								background-color: #fff;
+							}
+						}
+						.slick-next{
+							background: url('../images/master-slider-next.svg') center no-repeat;
+							background-color: #fff;
+							right: 0px;
+							&.slick-disabled{
+								border: 2px solid #CECECE;
+								background: url('../images/master-slider-next-disabled.svg') center no-repeat;
+								background-color: #fff;
+							}
+						}
+					}
+					&-item{
+						&-wrap{
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							width: 200px;
+							margin-bottom: 20px;
+						}
 						img{
 							width: 100%;
 						}
@@ -77,6 +113,11 @@
 							padding: 0 10px; 
 							font-size: 16px;
 						}
+						&__slide{
+							font-family: "Museo Sans Cyrl Lightest";
+							font-size: 24px;
+							display: none;
+						}
 					}
 					&-album{
 						width: 325px;
@@ -94,12 +135,231 @@
 							margin-top: 15px;
 							margin-bottom: 15px;
 						}
+						&__date{
+							display: none;
+						}
 					}
 				}
 				p{
 					font-family: "Museo Sans Cyrl Light";
 					font-size: 16px;
 					margin: 20px 0;
+				}
+				&-form{
+					width: 320px;
+					&-pair{
+						display: flex;
+						flex-direction: column;
+						margin-bottom: 20px;
+						position: relative;
+						&:first-child{
+							margin-top: 35px;
+							&:before{
+								content: '';
+								position: absolute;
+								width: 20px;
+								height: 20px;
+								left: 285px;
+								top: 38px;
+								background: url('../images/calendar.svg') center no-repeat;
+								background-size: contain;
+							}
+						}
+						&__label{
+							font-size: 14px;
+							font-family: 'Museo Sans Cyrl Lightest';
+							margin-bottom: 10px;
+							padding-left: 15px;
+						}
+						&__input{
+							background: transparent;
+							border: 2px solid #6C6767;
+							border-radius: 30px;
+							width: 320px;
+							padding: 13px;
+							font-size: 14px;
+							position: relative;
+							
+							&::placeholder {
+								color: #7C7A7A;
+							}
+						}
+					}
+					&__btn{
+						background-color: #fff;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 194px;
+						height: 48px;
+						font-size: 18px;
+						border: 2px solid #DC143C;
+						border-radius: 30px;
+						margin: 30px auto 0;
+						color: #000;
+						@media screen and (min-width:1366px){
+							&:hover{
+								transform: translateY(-3px);
+								box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+							}
+							&:active{
+								transform: translateY(3px);
+								box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.pickmeup{
+	margin-left: 55px;
+	margin-top: -2px;
+	font-family: "Museo Sans Cyrl Light";
+	font-size: 14px;
+	background-color: #F9F9F9;
+	border: 2px solid #6C6767;
+	.pmu-instance .pmu-today {
+    background: transparent;
+	}
+	.pmu-instance .pmu-button {
+		color: #3A405B;
+		&:hover {
+			background: #7F7F7F;
+			color: #fff;
+		}
+		&.pmu-selected{
+			background-color:  #383838;
+			color: #fff;
+		}
+	}
+	.pmu-instance nav .pmu-button{
+		&:hover{
+			color: #000;
+			background: transparent;
+		}
+	}
+	.pmu-instance .pmu-days .pmu-button{
+		&:hover {
+			background: #7F7F7F;
+			color: #fff;
+		}
+		&.pmu-selected{
+			background-color:  #383838;
+			color: #fff;
+		}
+		&.pmu-not-in-month{
+			color: #7F7F7F;
+			&:hover{
+				background: #7F7F7F;
+				color: #fff;
+			}
+		}
+	}
+	.pmu-instance .pmu-day-of-week {
+		color: #3A405B;
+	}
+}
+
+@include w1024{
+	.master{
+		&-class{
+			&-tabs{
+				padding-top: 170px;
+				align-items: center;
+				&-tab#masterTab3{
+					align-self: center;
+				}
+				&-tab{
+					&-form{
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include w480{
+	.master{
+		&-class{
+			&-wrap{
+				width: 90%;
+			}
+			&-tabs{
+				&-navigation{
+					display: none;
+				}
+				&-tab{
+					margin-bottom: 45px;
+					&__title{
+						font-size: 24px;
+					}
+					&__text{
+						display: none;
+					}
+					&-main{
+						width: 300px;
+						margin: 0 auto;
+						&-inn{
+							margin-top: 20px;
+						}
+						&-item{
+							&-wrap{
+								width: auto;
+								height: 358px;
+								justify-content: space-between;
+							}
+							&__num{
+								display: none;
+							}
+							&__img{
+								height: auto;
+								margin-bottom: 0;
+							}
+							&__slide{
+								display: block;
+							}
+						}
+						&-album{
+							&__text{
+								display: none;
+							}
+							&__date{
+								font-family: "Museo Sans Cyrl Lightest";
+								font-size: 24px;
+								display: block;
+								text-align: center;
+								margin-top: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include w320{
+	.master{
+		&-class{
+			&-tabs{
+				&-tab{
+					&-main{
+						width: 288px;
+					}
+					&-form{
+						width: 300px;
+						&-pair{
+							&__input{
+								width: 300px;
+							}
+							&:first-child:before{
+								left: 265px;
+							}
+						}
+					}
 				}
 			}
 		}

@@ -15,6 +15,36 @@
 		text-align: center;
 	}
 	&-tabs{
+		display: flex;
+		flex-direction: column;
+		&__activeTab{
+			background: #FFFFFF;
+			border: 2px solid #7A7A7A;
+			box-sizing: border-box;
+			border-radius: 30px;
+			padding: 12px 55px;
+			cursor: pointer;
+			position: relative;
+			font-size: 14px;
+			align-self: center;
+			display: none;
+			margin: 30px 0;
+			&:after{
+				content: '';
+				position: absolute;
+				right: 30px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 12px;
+				height: 7px;
+				background: url('../images/tabsSelectDown.svg') center no-repeat;
+				background-size: contain;
+			}
+			&.active:after{
+				background: url('../images/tabsSelectUp.svg') center no-repeat;
+				background-size: contain;
+			}
+		}
 		&-navigation{
 			font-size: 18px;
 			font-family: 'Museo Sans Cyrl Lightest';
@@ -23,6 +53,7 @@
 			width: 100%;
 			margin-top: 30px;
 			margin-bottom: 40px;
+			z-index: 2;
 			&__item.selected{
 				font-family: 'Museo Sans Cyrl';
 				font-weight: bold;
@@ -42,6 +73,26 @@
 				margin: 0 10px 40px;
 				&__img{
 					width: 100%;
+				}
+				a{
+					position: relative;
+				}
+				&__btn{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					opacity: 0.75;
+					background: #FFFFFF;
+					border: 2px solid #FFFFFF;
+					border-radius: 30px;
+					color: #DC143C;
+					font-size: 14px;
+					width: 160px;
+					height: 43px;
+					bottom: 20px;
+					left: 50%;
+					transform: translateX(-50%);
 				}
 				&__text{
 					font-size: 14px;
@@ -67,6 +118,75 @@
 					& img{
 						transform: rotate(180deg);
 					}
+				}
+			}
+		}
+	}
+}
+
+@include w1024{
+	.portfolio{
+		padding-top: 170px;
+		&-tabs{
+			position: relative;
+			&__activeTab{
+				display: block;
+				&.active{
+					border-radius: 22px 22px 0 0;
+				}
+			}
+			&-navigation{
+				display: none;
+				flex-direction: column;
+				align-self: center;
+				margin: 0;
+				position: absolute;
+				top: 40px;
+				left: -2px;
+				padding: 10px 20px;
+				background: #FFFFFF;
+				border: 2px solid #7A7A7A;
+				border-radius: 0 0 30px 30px;
+				font-size: 14px;
+				text-align: center;
+				width: calc(100% + 4px);
+				li{
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+}
+
+@include w480{
+	.portfolio{
+		&__title{
+			font-size: 24px;
+		}
+		&-tabs{
+			&__activeTab{
+				padding: 12px 40px;
+				&:after{
+					right: 20px;
+				}
+			}
+			&-tab{
+				&-show{
+					font-size: 18px;
+					width: 120px;
+				}
+			}
+		}
+	}
+}
+
+@include w320{
+	.portfolio{
+		&-tabs{
+			&-tab{
+				&-item{
+					width: 290px;
+					margin: 0 0 20px;
 				}
 			}
 		}

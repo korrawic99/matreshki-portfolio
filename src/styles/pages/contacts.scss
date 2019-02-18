@@ -57,3 +57,51 @@
 		background-size: contain;
 	}
 }
+
+@include w1024{
+	.contacts{
+		&-info{
+			padding-top: 170px;
+			margin-bottom: 40px;
+			&-block{
+				flex-direction: column-reverse;
+			}
+			&-right{
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@include w480{
+	.contacts{
+		&-info{
+			&-right{
+				height: 260px;
+				#ymaps1550487883449893384{
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include w320{
+	.contacts{
+		&-info{
+			&-left{
+				&__title{
+					margin-bottom: 20px;
+				}
+				&__text{
+					margin: 10px 0;
+					font-size: 14px;
+				}
+				&__num{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
