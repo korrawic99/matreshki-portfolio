@@ -8,6 +8,14 @@
   flex-direction: column;
 	justify-content: space-between;
 	color: #fff;
+	&-wrap{
+		max-width: 1210px;
+		width: 95%;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		display: flex;
+	}
 	&-block{
 		display: flex;
 		align-items: center;
@@ -574,7 +582,7 @@
 	.banner{
 		padding-top: 50px;
 		margin-top: 100px;
-		height: calc(100vh - 100px);
+		height: auto;
 		&-block{
 			flex-direction: column;
 			&-right{

@@ -279,6 +279,11 @@
 			}
 		}
 	}
+	.pickmeup{
+		margin-left: 0;
+    left: 50%!important;
+    transform: translateX(-50%);
+	}
 }
 
 @include w480{

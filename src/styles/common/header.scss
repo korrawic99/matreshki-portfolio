@@ -47,7 +47,6 @@
 	padding-top: 40px;
 	color: #000;
 	&-wrap{
-		max-width: 1365px;
 		width: 97%;
 		margin: 0 auto;
 		display: flex;
@@ -58,7 +57,8 @@
 		font-size: 14px;
 		display: flex;
     justify-content: space-between;
-		flex: 0 610px;
+		max-width: 765px;
+    flex: 1;
 		&__item{
 			position: relative;
 			&:hover:after{
@@ -73,7 +73,7 @@
 		&-phone, &-location, &-cart{
 			display: none;
 		}
-		&__logo{
+		& > div:first-child{
 			display: none;
 		}
 	}
@@ -147,6 +147,12 @@
 	}
 }
 
+@include w1440{
+	.header-menu{
+		max-width: 610px;
+	}
+}
+
 @include w1024{
 	.header{  
 		padding: 15px 15px 0;            
@@ -202,6 +208,7 @@
 			flex-direction: column;
 			position: fixed;
 			height: 100vh;
+			max-width: none;
 			width: 100vw;
 			background: #fff;
 			display: none;
@@ -215,6 +222,9 @@
 			&.active{
 				display: flex;
 				overflow-y: scroll;
+			}
+			& > div:first-child{
+				display: block;
 			}
 			&__item{
 				font-weight: bold;

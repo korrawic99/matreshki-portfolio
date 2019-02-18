@@ -260,10 +260,19 @@
 					margin-bottom: 15px;
 				}
 				&-adv{
-					flex-direction: column;
+					flex-wrap: wrap;
+					align-items: center;
+					justify-content: center;
 					&-item{
-						margin: 0;
+						margin: 0 25px;
 						margin-bottom: 10px;
+						width: 100px;
+						&:first-child{
+							margin-left: 25px;
+						}
+						&:last-child{
+							margin: 0 25px;
+						}
 					}
 				}
 			}
